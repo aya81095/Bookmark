@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- & fontawesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- & bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- & style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- & head font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- & body font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bookmarks App</title>
+  </head>
+  <body>
+    <div class="container body-font py-5">
+      <div class="row">
+        <div class="col-lg-6 p-3 mb-4 pt-lg-2 mt-lg-5">
+          <div class="form-container bg-white p-3 rounded-3">
+            <h1 class="text-center head-font my-4">Bookmarker</h1>
+            <div
+              class="title text-center d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-bookmark fs-4"></i>
+              <h4 class="fw-bolder mb-0">Bookmark your favorite sites</h4>
+              <i class="fa-solid fa-bookmark fs-4"></i>
+            </div>
+            <form action="" class="my-4">
+              <div class="name mb-4">
+                <label for="name" class="mb-2 fw-bold">
+                  <i class="fa-solid fa-book-bookmark"></i>
+                  Site Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Bookmark Name"
+                  name="bookmark name"
+                  class="form-control"
+                  oninput="validate(nameRegex, siteNameInput)"
+                />
+              </div>
+              <div class="url mb-4">
+                <label for="url" class="mb-2 fw-bold">
+                  <i class="fa-solid fa-link"></i>
+                  Site URL</label
+                >
+                <input
+                  type="url"
+                  id="url"
+                  placeholder="Website URL"
+                  name="bookmark url"
+                  class="form-control"
+                  oninput="validate(urlRegex, siteUrlInput)"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="border-0 py-1 px-5 rounded-3 bg-white fw-bold"
+                  onclick="addBookmark()"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div
+            class="row bookmarks-container body-font"
+            id="bookmarks-container"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!-- & sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- & bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- & main js -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

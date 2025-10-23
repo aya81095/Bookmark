@@ -1,0 +1,74 @@
+.head-font {
+  font-family: "Pacifico", cursive;
+}
+.body-font {
+  font-family: "PT Sans Caption", sans-serif;
+}
+body {
+  background-color: rgb(21, 74, 123);
+}
+.container {
+  background-color: #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  padding-inline: 30px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container .row .form-container {
+  box-shadow: 0 0 20px rgba(38, 126, 209, 0.389);
+  color: rgb(21, 74, 123);
+}
+.container .row .form-container h1 {
+  transition: scale 300ms;
+}
+.container .row .form-container h1:hover {
+  scale: 1.1;
+}
+
+.container .row .form-container form button {
+  color: rgb(21, 74, 123);
+  transition: box-shadow 300ms;
+}
+.container .row .form-container form button:hover {
+  box-shadow: 0 0 10px rgba(38, 126, 209, 0.389);
+}
+.container .row .form-container form input:focus {
+  box-shadow: 0 0 10px rgba(38, 126, 209, 0.389);
+}
+.container .row .form-container form input,
+.container .row .form-container form button {
+  outline: rgb(35, 111, 183) 0.2px solid;
+}
+
+.container .row .col-lg-6 .bookmarks-container {
+  color: rgb(21, 74, 123);
+}
+.container .row .col-lg-6 .bookmarks-container .bookmark {
+  box-shadow: 0 0 10px rgba(38, 126, 209, 0.389);
+  border-left: rgb(21, 74, 123) 5px solid;
+  position: relative;
+  overflow: hidden;
+}
+.container .row .col-lg-6 .bookmarks-container .bookmark h6 {
+  font-size: 12px;
+  font-weight: 600;
+  background-color: orange;
+  width: fit-content;
+  padding-block: 3px;
+  padding-inline: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    width: 90% !important;
+  }
+}
