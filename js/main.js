@@ -2,10 +2,12 @@
 var siteNameInput = document.getElementById("name");
 var siteUrlInput = document.getElementById("url");
 var bookmarksContainer = document.getElementById("bookmarks-container");
+var formContainer = document.getElementById("form-container");
 
 // ^  vars
 var bookMarksList = JSON.parse(localStorage.getItem("bookMarksList")) || [];
 displayAllBookmarks();
+changeStyle();
 
 // ! regexs
 var nameRegex = /^[A-Za-z0-9 ]{3,}$/;
@@ -37,6 +39,7 @@ function addBookmark() {
       text: "Site name must contain at least 3 characters & Site URL must be a valid one",
     });
   }
+  changeStyle();
 }
 
 function displayBookmark(index) {
@@ -75,6 +78,7 @@ function deleteBookmark(index) {
   localStorage.setItem("bookMarksList", JSON.stringify(bookMarksList));
   bookmarksContainer.innerHTML = "";
   displayAllBookmarks();
+  changeStyle();
 }
 function validate(regex, input) {
   if (regex.test(input.value)) {
@@ -92,4 +96,14 @@ function clearForm() {
   siteUrlInput.value = "";
   siteNameInput.classList.remove("is-valid");
   siteUrlInput.classList.remove("is-valid");
+}
+
+function changeStyle() {
+  if (bookMarksList.length === 0) {
+    formContainer.classList.remove("col-lg-6");
+    formContainer.classList.add("col-12");
+  } else {
+    formContainer.classList.add("col-lg-6");
+    formContainer.classList.remove("col-12");
+  }
 }
